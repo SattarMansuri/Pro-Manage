@@ -1,0 +1,114 @@
+.setting{
+  display: flex;
+  font-family: open sans;
+}
+.leftSection{
+  width: 15vw;
+  height: 100vh;
+}
+.rightSection{
+  height: 100vh;
+  width: 85vw;
+}
+.rightSection h1{
+  margin-left: 5vw;
+  margin-top: 5vh;
+  font-size: 2vw;
+  font-weight: 600;
+}
+.rightSection form{
+  margin-left: 3.5vw;
+  margin-top: 5vh;
+}
+.rightSection input{
+  width: 25vw;
+  padding-left: 2vw;
+  font-size: 1vw;
+  height: 5vh;
+  margin-bottom: 2vh;
+  border: 1.38px solid #D0D0D0;
+  border-radius: .3rem;
+}
+.registerbtn{
+  background-color: #17A2B8;
+  color: #FFFFFF;
+  width: 27.3vw;
+  height: 6vh;
+  border: none;
+  border-radius: 1.2rem;
+  font-size: 1vw;
+  margin-bottom: 4vh;
+  margin-left: 1.3vw;
+  cursor: pointer;
+}
+.rightSection div{
+  color: #828282;
+  margin-left: 17vw;
+}
+.name{
+  position: relative;
+  left: 1.7vw;
+  top: .7vh;
+  font-size: 1.5vw;
+  color: #828282;
+}
+.email{
+  position: relative;
+  left: 1.7vw;
+  top: 1vh;
+  font-size: 1.5vw;
+  color: #828282;
+}
+.pwd{
+  position: relative;
+  left: 1.7vw;
+  top: .7vh;
+  font-size: 1.5vw;
+  color: #828282;
+}
+.cnfPwd{
+  position: relative;
+  left: 1.7vw;
+  /* top: .7vh; */
+  font-size: 1.5vw;
+  color: #828282;
+}
+.pwdShow{
+  position: relative;
+  left: -2.5vw;
+  top: 1vh;
+  font-size: 1.5vw;
+  color: #828282;
+  cursor: pointer;
+}
+.pwdHide{
+  position: relative;
+  left: -2.5vw;
+  top: 1vh;
+  font-size: 1.5vw;
+  color: #828282;
+  cursor: pointer;
+}
+.upPwdShow{
+  position: relative;
+  left: -2.5vw;
+  top: 1vh;
+  font-size: 1.5vw;
+  color: #828282;
+  cursor: pointer;
+}
+.upPwdHide{
+  position: relative;
+  left: -2.5vw;
+  top: 1vh;
+  font-size: 1.5vw;
+  color: #828282;
+  cursor: pointer;
+}
+.error{
+ margin-top: -2vh;
+ margin-bottom: -1vh;
+ margin-left: 1.5vw;
+ color: #DB371F;
+ font-size: .8vw;
+}

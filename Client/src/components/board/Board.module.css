@@ -1,0 +1,506 @@
+.board{
+  display: flex;
+  font-family: Open sans;
+  overflow: hidden;
+}
+.leftSection{
+  width: 15vw;
+  height: 100vh;
+}
+.rightSection{
+  height: 100vh;
+  width: auto;
+  overflow-x: scroll;
+}
+.rightSection h1{
+  margin-left: 3vw;
+  margin-top: 5vh;
+  font-size: 2vw;
+  font-weight: 600;
+}
+.rightSection h2{
+  margin-left: 3vw;
+  margin-top: 3vh;
+}
+.rightSection::-webkit-scrollbar {
+  height: .5vw
+}
+.rightSection::-webkit-scrollbar-track {
+  background: #EEF2F5;
+}
+.rightSection::-webkit-scrollbar-thumb {
+  background: #9CB7C5; 
+  border-radius: 10px;
+}
+.addpeople{
+  font-size: 1vw;
+  color: #707070;
+  cursor: pointer;
+}
+.sections{
+  display: flex;
+  flex-direction: row;
+  margin-top: 3vh;
+  width: 110vw;
+}
+.backlog{
+  height: 75vh;
+  width: 25vw;
+  background-color: #EEF2F5;
+  margin-right: 2vw;
+  margin-left: 2vw;
+  border-radius: .5rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 1vh;
+}
+.backlog::-webkit-scrollbar {
+  width: .5vw;
+}
+.backlog::-webkit-scrollbar-track {
+  background: #EEF2F5;
+}
+.backlog::-webkit-scrollbar-thumb {
+  background: #9CB7C5; 
+  border-radius: 10px;
+}
+.todo{
+  height: 75vh;
+  width: 25vw;
+  background-color: #EEF2F5;
+  margin-right: 2vw;
+  border-radius: .5rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 1vh;
+}
+.todo::-webkit-scrollbar {
+  width: .5vw;
+}
+.todo::-webkit-scrollbar-track {
+  background: #EEF2F5;
+}
+.todo::-webkit-scrollbar-thumb {
+  background: #9CB7C5; 
+  border-radius: 10px;
+}
+.inprogress{
+  height: 75vh;
+  width: 25vw;
+  background-color: #EEF2F5;
+  margin-right: 2vw;
+  border-radius: .5rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 1vh;
+}
+.inprogress::-webkit-scrollbar {
+  width: .5vw;
+}
+.inprogress::-webkit-scrollbar-track {
+  background: #EEF2F5;
+}
+.inprogress::-webkit-scrollbar-thumb {
+  background: #9CB7C5; 
+  border-radius: 10px;
+}
+.done{
+  height: 75vh;
+  width: 25vw;
+  background-color: #EEF2F5;
+  margin-right: 2vw;
+  border-radius: .5rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 1vh;
+}
+.done::-webkit-scrollbar {
+  width: .5vw;
+}
+.done::-webkit-scrollbar-track {
+  background: #EEF2F5;
+  border-radius: 5rem;
+}
+.done::-webkit-scrollbar-thumb {
+  background: #9CB7C5; 
+  border-radius: 10px;
+}
+.backlog h3{
+  margin-top: 1.5vh;
+  margin-left: 1vw;
+  display: flex;
+  gap: 17vw;
+  font-weight: 500;
+  font-size: 1.3vw;
+}
+.todo h3{
+  margin-top: 1.5vh;
+  margin-left: 1vw;
+  display: flex;
+  gap: 16vw;
+  font-weight: 500;
+  font-size: 1.3vw;
+}
+.inprogress h3{
+  margin-top: 1.5vh;
+  margin-left: 1vw;
+  display: flex;
+  gap: 15vw;
+  font-weight: 500;
+  font-size: 1.3vw;
+}
+.done h3{
+  margin-top: 1.5vh;
+  margin-left: 1vw;
+  display: flex;
+  gap: 19vw;
+  font-weight: 500;
+  font-size: 1.3vw;
+}
+.addtodo{
+  height: 70vh;
+  width: 40vw;
+  margin-left: 30vw;
+  margin-top: 15vh;
+  background-color: #FFFFFF;
+  border-radius: .5rem;
+  padding: 1vh 1vw;
+  font-family: open sans;
+}
+.addtodo h2{
+  font-size: 1.1vw;
+  font-weight: 500;
+}
+.title{
+  height: 4vh;
+  width: 38vw;
+  margin-top: 1vh;
+  margin-bottom: 3vh;
+  box-shadow: 0px 1px 2px 0px #4D40551A;
+  border: 1px solid #E2E2E2;
+  border-radius: .5rem;
+  padding: 3px 10px;
+  color: #9B959F;
+}
+.priority{
+  display: flex;
+  gap: .3vw;
+  margin-left: .5vw;
+}
+.dot{
+ font-size: .8vw;
+ position: relative;
+ top: 1vh;
+ left: 1.2vw;
+}
+.high{
+  color: #767575;
+  border: 1px solid #E2E2E2;
+  border-radius: .3rem;
+  height: 4vh;
+  width: 7vw;
+  padding: 2px 9px;
+  text-align: center;
+  cursor: pointer;
+  font-size: .8vw;
+}
+.moderate{
+  color: #767575;
+  border: 1px solid #E2E2E2;
+  border-radius: .3rem;
+  height: 4vh;
+  width: 10vw;
+  padding: 2px 0px 2px 7px;
+  text-align: center;
+  cursor: pointer;
+  font-size: .8vw;
+}
+.low{
+  color: #767575;
+  border: 1px solid #E2E2E2;
+  border-radius: .3rem;
+  height: 4vh;
+  width: 7vw;
+  padding: 2px 9px;
+  text-align: center;
+  cursor: pointer;
+  font-size: .8vw;
+}
+.cancel{
+  border: 1px solid #CF3636;
+  height: 5vh;
+  width: 10vw;
+  background-color: #FFFFFF;
+  color: #CF3636;
+  font-weight: 600;
+  border-radius: .3rem;
+  font-size: 1.1vw;
+  margin-right: 2vw;
+  margin-left: 18vw;
+  cursor: pointer;
+}
+.date{
+  border: 1px solid #E2E2E2;
+  height: 5vh;
+  width: 11vw;
+  color: #707070;
+  font-weight: 500;
+  border-radius: .3rem;
+  font-size: 1.1vw;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  position: fixed;
+  bottom: 15vh;
+  text-align: center;
+}
+.save{
+  border: none;
+  height: 5vh;
+  width: 10vw;
+  background-color: #17A2B8;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: .3rem;
+  font-size: 1.1vw;
+  cursor: pointer;
+}
+.buttons{
+  position: fixed;
+  bottom: 15vh;
+}
+.addtodo h3{
+  color: #767575;
+  font-weight: 500;
+  font-size: 1.1vw;
+  cursor: pointer;
+  margin-top: 1.5vh;
+}
+.checklistinput{
+  height: 4vh;
+  width: 32vw;
+  box-shadow: 0px 1px 2px 0px #4D40551A;
+  border: 1px solid #E2E2E2;
+  border-radius: .5rem;
+  padding: 3px 2vw;
+  color: #9B959F;
+  margin-bottom: 5vh;
+}
+.checklistdiv{
+max-height: 25vh;
+width: 40vw;
+margin-top: 2vh;
+margin-bottom: 2vh;
+overflow-y: scroll;
+overflow-x: hidden;
+}
+.checklistdiv::-webkit-scrollbar {
+  width: .5vw;
+}
+.checklistdiv::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+.checklistdiv::-webkit-scrollbar-thumb {
+  background: #9CB7C5; 
+  border-radius: 10px;
+}
+
+.delete{
+  position: relative;
+  top: .5vh;
+  right: 1vw;
+  font-size: 1vw;
+  color: #CF3636;
+}
+.checklistcomp{
+  margin-bottom: -5vh;
+  margin-top: 3vh;
+  margin-left: -1vw;
+}
+.addemail{
+  height: 22vh;
+  width: 36vw;
+  margin-top: 35vh;
+  margin-left: 30vw;
+  background-color: #FFFFFF;
+  padding: 4vh 2vw;
+  font-family: open sans;
+  border-radius: .5rem;
+}
+.addemail input{
+  height: 4vh;
+  width: 35vw;
+  box-shadow: 0px 1px 2px 0px #4D40551A;
+  border: 1px solid #E2E2E2;
+  border-radius: .5rem;
+  padding: 3px 10px;
+  color: #9B959F;
+}
+.cancleemail{
+  border: 1px solid #CF3636;
+  height: 5vh;
+  width: 15vw;
+  background-color: #FFFFFF;
+  color: #CF3636;
+  font-weight: 600;
+  border-radius: .3rem;
+  font-size: 1.1vw;
+  margin-right: 6vw;
+}
+.addemailbtn{
+  border: none;
+  height: 5vh;
+  width: 15vw;
+  background-color: #17A2B8;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: .3rem;
+  font-size: 1.1vw;
+}
+.display{
+  background-color: #FFFFFF;
+  margin-left: .7vw;
+  margin-top: 2vh;
+  border-radius: .3rem;
+  padding: 1vh 1vw;
+}
+.down{
+  height: 3vh;
+  cursor: pointer;
+}
+.up{
+  height: 3vh; 
+  position: relative;
+  cursor: pointer;
+}
+.details span{
+  font-size: .9vw;
+  border-radius: .3rem;
+  background-color: #EEECEC;
+  padding: 2px 3px;
+  color: #767575;
+  cursor: pointer;
+}
+.assign{
+  margin-top: 1vh;
+  margin-left: 1vw;
+  margin-bottom: 1vh;
+}
+.assign select{
+  margin-left: 1.5vw;
+  height: 4vh;
+  width: 32vw;
+  border: 1px solid #E2E2E2;
+  border-radius: .3rem;
+  padding: 2px 5px;
+}
+.checklisttask{
+  border: 1px solid #E2E2E2;
+  border-radius: 1rem;
+  padding: 1vh 1vw;
+  margin-bottom: 1vh;
+}
+.checklisttask input{
+  height: 3vh;
+  width: 3vw;
+  position: relative;
+  top: .5vh;
+  border: 2px solid #E2E2E2;
+  border-radius: .5rem;
+}
+.checkbox{
+  height: 3vh;
+  width: 2vw;
+  position: relative;
+  left: 2vw;
+  top: 1vh;
+}
+.controls{
+  height: 14.7vh;
+  width: 10vw;
+  box-shadow: 0px 2px 22px 0px #7E7A7A40;
+  border-radius: .5rem;
+  cursor: pointer;
+  position: relative;
+  left: 11vw;
+  bottom: 5vh;
+}
+
+.edit{
+  padding: .8vh 2vw;
+}
+.share{
+  padding: .8vh 2vw;
+}
+.deletetask{
+  padding: .8vh 2vw;
+}
+.edit:hover{
+  background-color: #DBDBDB;
+}
+.share:hover{
+  background-color: #DBDBDB;
+}
+.deletetask:hover{
+  background-color: #DBDBDB;
+}
+.outputdot{
+  position: relative;
+  font-size: .8vw;
+  bottom: .3vh;
+}
+.dots{
+  margin-left: 18vw;
+  font-size: 1.5vw; 
+  cursor: pointer;
+  position: relative;
+  bottom: 5vh;
+  left: 3vw;
+}
+.afteremailadd{
+  font-size: 1.5vw;
+  font-weight: 600;
+  text-align: center;
+}
+.afteremailadd button{
+  margin-top: 10vh;
+  height: 6vh;
+  width: 20vw;
+  background-color: #17A2B8;
+  border: none;
+  border-radius: 1rem;
+  color:#FFFFFF;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.time{
+  position: absolute;
+  left: 90vw;
+  top: 3vh;
+  color: #707070;
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+.spansec{
+  position: relative;
+  left: 8vw;
+  margin-right: .5vw;
+}
+.assignedEmail{
+  font-size: 1.1vw;
+  background-color: #FFEBEB;
+  padding: 2px 4px;
+  border-radius: 1.1rem;
+  margin-left: 1vw;
+  cursor: pointer;
+}
+.taskflter{
+ position: absolute;
+ top: 10vh;
+ left: 87vw;
+ background-color: #FFFFFF;
+ padding: 2vh  2vw;
+}
+.filterarrow{
+  position: absolute;
+  left: 7vw;
+}

@@ -1,0 +1,123 @@
+.SharePage{
+  height: 95vh;
+  width: 95vw;
+  font-family: open sans;
+}
+.SharePage h1{
+  margin-top: 5vh;
+  margin-left: 5vw;
+  font-size: 2vw;
+}
+.dot{
+  font-size: 1vw;
+}
+.prioritySel{
+  font-size: 1vw;
+}
+.logo{
+  height: 5vh;
+  width : 2.5vw;
+}
+.container{
+  min-height: 67vh;
+  width: 27vw;
+  border: 2px solid #EDF5FE;
+  position: fixed;
+  left: 35vw;
+  top: 15vh;
+  border-radius: .5rem;
+  padding: 1.5vh 1.5vw;
+}
+.title{
+  font-size: 1.5vw;
+  font-weight: 500;
+  margin-top: 1vh;
+}
+.checklist{
+  font-size: 1.2vw; 
+  font-weight: 500;
+}
+.checklisttask{
+  border: 1px solid #E2E2E2;
+  border-radius: 1rem;
+  padding: 1vh 1vw;
+  margin-bottom: 1.5vh;
+}
+.checklistarr{
+height: 32vh;
+overflow-y: scroll;
+margin-top: 2vh;
+}
+.checklistarr::-webkit-scrollbar {
+  width: .5vw;
+}
+.checklistarr::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+.checklistarr::-webkit-scrollbar-thumb {
+  background: #9CB7C5; 
+  border-radius: 10px;
+}
+.checkbox{
+  font-size: 2vw;
+  position: relative;
+  top: .7vh;
+  color: #E2E2E2;
+  margin-right: .5vw;
+}
+@media(max-width: 800px) {
+  .title{
+    margin-top: -2vh;
+    margin-bottom: -3vh;
+  }
+  .dateSel{
+    font-size: 1vw;
+  }
+  .checkbox{
+    font-size: 2.5vw;
+    position: relative;
+    top: 0vh
+  }
+  .logo{
+    position: relative;
+    top: 1vh;
+  }
+}
+
+@media(max-width: 500px) {
+  .container{
+    width: 80vw;
+    position: fixed;
+    left: 10vw;
+  }
+  .checklisttask{
+    font-size: 2vw;
+  }
+  .checkbox{
+    font-size: 3vw;
+    position: relative;
+    top: 0vh
+  }
+  .SharePage h1{
+    position: fixed;
+    left: 7vw;
+    font-size: 3vw;
+  }
+  .logo{
+    position: relative;
+    top: 1vh;
+  }
+  .checklist{
+    font-size: 2.5vw; 
+    font-weight: 500;
+  }
+  .title{
+    font-size: 3vw;
+    font-weight: 600;
+    margin-top: -1vh;
+    margin-bottom: -3vh;
+  }
+  .dateSel{
+    font-size: 2vw;
+  }
+}
