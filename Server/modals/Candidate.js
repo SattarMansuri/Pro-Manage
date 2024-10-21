@@ -1,23 +1,26 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-const candidateSchema = new mongoose.Schema({
-  name: {
-    type: String,
+const candidateSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    password: {
+      type: String,
+      required: true,
+    },
+    cnfPassword: {
+      type: String,
+      required: true,
+    },
   },
-  email: {
-    type: String,
-    required: true,
-    unique: true
-  },
-  password: {
-    type: String,
-    required: true
-  },
-  cnfPassword: {
-    type: String,
-    required: true
-  }
-})
+  { timestamps: true }
+);
 
-const Candidate = mongoose.model('Candidate', candidateSchema)
-module.exports = Candidate
+const Candidate = mongoose.model('Candidate', candidateSchema);
+module.exports = Candidate;

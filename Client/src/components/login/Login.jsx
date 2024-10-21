@@ -8,10 +8,12 @@ import { LuEye, LuEyeOff } from "react-icons/lu";
 import { useNavigate } from 'react-router';
 import {loginUser} from '../../apis/auth'
 import toast, { Toaster } from 'react-hot-toast';
+import 'boxicons/css/boxicons.min.css'
 
 const Login = () => {
   const [error, setError] = useState({})
   const [showPwd, setShowPwd] = useState(true)
+  const [userLogin, setUserLogin] = useState(false)
   const [formData, setFormData] = useState({
     email: "",
     password: ""
@@ -26,28 +28,30 @@ const Login = () => {
 const submitHandle = async (e) =>{
   e.preventDefault()
   const error = {}
+  setUserLogin(true)
   if(!formData.email.length){
     error.email = "Email required"
+    setUserLogin(false)
   }
   if(!formData.password.length){
     error.password = "Password required"
+    setUserLogin(false)
   }
   setError(error)
   const response = await loginUser(formData.email, formData.password)
   if(response?.success === false){
     toast.error(response.message)
+    setUserLogin(false)
   }
   if(response?.success === true){
     localStorage.setItem('user', response.name)
-       localStorage.setItem('token', response.token)
-       localStorage.setItem('email', response.email)
-       navigate("/Board")
+    localStorage.setItem('token', response.token)
+    localStorage.setItem('email', response.email)
+    navigate("/Board")
     setTimeout(()=>{
        toast.success(response.message)
     }, 2000)
   }
-  
-    
 }
 
   return (
@@ -69,7 +73,10 @@ const submitHandle = async (e) =>{
           <input type={showPwd? "password" : "text"} placeholder='Password' name='password' onChange={changeHandle} />
           {showPwd ? <LuEye className={styles.pwdShow} onClick={passwordShow} /> : <LuEyeOff className={styles.pwdHide} onClick={()=>setShowPwd(true)}/>}
           {error.password? <p className={styles.error}>{error.password}</p>:<></>}<br />
-          <button onClick={submitHandle} className={styles.loginbtn}>Log in</button>
+          <button onClick={submitHandle} className={styles.loginbtn}>Log in
+          &nbsp; &nbsp;
+         {userLogin ? <i className='bx bx-loader-alt bx-spin'></i> : null}
+          </button>
     </form>
     <div>Have no account yet?</div>
     <button onClick={()=>navigate('/')} className={styles.registerbtn}>Register</button>

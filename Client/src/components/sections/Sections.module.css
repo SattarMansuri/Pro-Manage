@@ -1,0 +1,111 @@
+.outputdot{
+  position: relative;
+  font-size: .8vw;
+  bottom: .3vh;
+}
+.assignedEmail{
+  font-size: 1.1vw;
+  background-color: #FFEBEB;
+  padding: 2px 4px;
+  border-radius: 1.1rem;
+  margin-left: 1vw;
+  cursor: pointer;
+  position: relative;
+  left: 10vw;
+  bottom: 2vh;
+}
+.priorityname{
+  font-size: 1vw;
+ display: block;
+ position: relative;
+ bottom: 3vh;
+ left: 1vw;
+ margin-bottom: -4vh;
+}
+.dots{
+  margin-left: 18vw;
+  font-size: 1.5vw; 
+  cursor: pointer;
+  position: absolute;
+  top: -1vh;
+  left: 3vw;
+}
+.controls{
+  height: 13.5vh;
+  width: 8vw;
+  box-shadow: 0px 2px 22px 0px #7E7A7A40;
+  border-radius: .5rem;
+  cursor: pointer;
+  position: absolute;
+  right: 3%;
+  top: 2%;
+  overflow: hidden;
+  z-index: 1;
+}
+.display{
+  background-color: #FFFFFF;
+  margin-left: .7vw;
+  margin-top: 2vh;
+  border-radius: .3rem;
+  padding: 1vh 1vw;
+  max-width: 24vw;
+  position: relative;
+}
+.edit{
+  padding: .8vh 2vw;
+}
+.share{
+  padding: .8vh 2vw;
+}
+.deletetask{
+  padding: .8vh 2vw;
+}
+.edit:hover{
+  background-color: #DBDBDB;
+}
+.share:hover{
+  background-color: #DBDBDB;
+}
+.deletetask:hover{
+  background-color: #DBDBDB;
+}
+.down{
+  height: 3vh;
+  width: 1.5vw;
+  cursor: pointer;
+}
+.up{
+  height: 3vh; 
+  width: 1.5vw;
+  position: relative;
+  cursor: pointer;
+}
+.checklisttask{
+  border: 1px solid #E2E2E2;
+  border-radius: 1rem;
+  padding: 1vh 1vw;
+  margin-bottom: 1vh;
+  font-size: 1.1vw;
+}
+.checklisttask input{
+  height: 3vh;
+  width: 3vw;
+  position: relative;
+  top: .5vh;
+  border: 2px solid #E2E2E2;
+  border-radius: .5rem;
+  font-size: 1vw;
+}
+.spansec{
+  position: relative;
+  left: 8vw;
+  margin-right: .5vw;
+}
+.details span{
+  font-size: .9vw;
+  border-radius: .3rem;
+  background-color: #EEECEC;
+  padding: 2px 3px;
+  color: #767575;
+  cursor: pointer;
+}

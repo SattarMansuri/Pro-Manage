@@ -21,16 +21,16 @@ const Analytics = () => {
       <h1>Analytics</h1>
       <div className={styles.task}>
         <p className={styles.leftTask}>
-            <li><span className={styles.dot}>&#11044;</span> &nbsp; Backlog Task  <span className={styles.number1}>{allAnalytics?.backlogTask}</span></li>
-            <li><span className={styles.dot}>&#11044;</span> &nbsp; To-do Tasks <span className={styles.number2}>{allAnalytics?.todoTask}</span></li>
-            <li><span className={styles.dot}>&#11044;</span> &nbsp; In-Progress tasks <span className={styles.number3}>{allAnalytics?.inProgress}</span></li>
-            <li><span className={styles.dot}>&#11044;</span> &nbsp; Completed Tasks <span className={styles.number4}>{allAnalytics?.doneTask}</span></li>
+            <li><span className={styles.dot}>&#11044;</span> &nbsp; Backlog Task  <span className={styles.number1}>{allAnalytics?.backlogTask || '0'}</span></li>
+            <li><span className={styles.dot}>&#11044;</span> &nbsp; To-do Tasks <span className={styles.number2}>{allAnalytics?.todoTask || '0'}</span></li>
+            <li><span className={styles.dot}>&#11044;</span> &nbsp; In-Progress tasks <span className={styles.number3}>{allAnalytics?.inProgress || '0'}</span></li>
+            <li><span className={styles.dot}>&#11044;</span> &nbsp; Completed Tasks <span className={styles.number4}>{allAnalytics?.doneTask || '0'}</span></li>
         </p>
         <p className={styles.rightTask}>
-        <li><span className={styles.dot}>&#11044;</span> &nbsp; Low Priority  <span className={styles.number1}>{allAnalytics?.lowPriority}</span></li>
-            <li><span className={styles.dot}>&#11044;</span> &nbsp; Moderate prioirity <span className={styles.number5}>{allAnalytics?.moderatePriority}</span></li>
-            <li><span className={styles.dot}>&#11044;</span> &nbsp; High Priority <span className={styles.number6}>{allAnalytics?.highPriority}</span></li>
-            <li><span className={styles.dot}>&#11044;</span> &nbsp; Due Dates tasks<span className={styles.number7}>{allAnalytics?.dueDatetaskTotal - allAnalytics?.dueDateTaskNull}</span></li>
+        <li><span className={styles.dot}>&#11044;</span> &nbsp; Low Priority  <span className={styles.number1}>{allAnalytics?.lowPriority || '0'}</span></li>
+            <li><span className={styles.dot}>&#11044;</span> &nbsp; Moderate prioirity <span className={styles.number5}>{allAnalytics?.moderatePriority || '0'}</span></li>
+            <li><span className={styles.dot}>&#11044;</span> &nbsp; High Priority <span className={styles.number6}>{allAnalytics?.highPriority || '0'}</span></li>
+            <li><span className={styles.dot}>&#11044;</span> &nbsp; Due Dates tasks<span className={styles.number7}>{ allAnalytics?.dueDatetaskTotal - allAnalytics?.dueDateTaskNull || '0'}</span></li>
         </p>
       </div>
     </div>

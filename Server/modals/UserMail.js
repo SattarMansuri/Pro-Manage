@@ -4,7 +4,11 @@ const UserMailSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
-    unique: true
+  },
+  userRef: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Candidate",
+    required: true
   }
 })
 

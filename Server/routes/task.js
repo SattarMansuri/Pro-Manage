@@ -11,5 +11,6 @@ router.put("/zone/:id", tokenVerify, taskController.moveTaskInZone)
 router.delete('/delete/:id', tokenVerify, taskController.deleteTask)
 router.get('/zone/:zoneName', tokenVerify, taskController.getTaskByZone)
 router.get('/analytics', tokenVerify, taskController.getAllAnalytics)
+router.get('/alltask', tokenVerify, taskController.getAllTasks)
 
 module.exports = router

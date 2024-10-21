@@ -6,6 +6,7 @@ import SettingPage from './pages/setting page/SettingPage'
 import BoardPage from '../src/pages/board page/BoardPage'
 import SharePage from "./components/share page/SharePage"
 import ProtectedRoute from "./components/ProtectedRoute"
+import AddPeopleModal from "./components/add people modal/AddPeopleModal"
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <Route path="board/task/:id" element={<SharePage />} />
     </Routes>
     </BrowserRouter>
+    // <AddPeopleModal />
   )
 }
 

@@ -9,11 +9,13 @@ import { registerUser } from '../../apis/auth';
 import { useNavigate } from 'react-router';
 import Logo from '../../assets/HomePageLogo.png'
 import toast, { Toaster } from 'react-hot-toast';
+import 'boxicons/css/boxicons.min.css'
 
 const Register = () => {
   const [showPwd, setShowPwd] = useState(true)
   const [showCnfPwd, setShowCnfPwd] = useState(true)
   const [samePwd, setSamePwd] = useState(false)
+  const [userRegister, setUserRegitser] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,27 +34,34 @@ const cnfPasswordShow = () =>{
   setShowCnfPwd(false)
 }
 const submitHandle = async (e) =>{
+  setUserRegitser(true)
   e.preventDefault()
   const error = {}
   if(!formData.name.length){
     error.name = "Name Required"
+    setUserRegitser(false)
   }
   if(!formData.email.length){
     error.email = "Email required"
+    setUserRegitser(false)
   }
   if(!formData.password.length){
     error.password = "Password required"
+    setUserRegitser(false)
   }
   if(!formData.cnfPassword.length){
     error.cnfPassword = "Confirm password required"
+    setUserRegitser(false)
   }
   setError(error)
   if(formData.password !== formData.cnfPassword){
     setSamePwd(true)
+    setUserRegitser(false)
   }
   const response = await registerUser({...formData})
   if(response?.success === false){
     toast.error(response.message)
+    setUserRegitser(false)
   }
   if(response?.success === true){
     localStorage.setItem('user', response.name)
@@ -91,7 +100,10 @@ const submitHandle = async (e) =>{
           {showCnfPwd ? <BsEye className={styles.cnfPwdShow} onClick={cnfPasswordShow}/> : <BsEyeSlash className={styles.cnfPwdHide} onClick={()=>setShowCnfPwd(true)}/>}
           {error.cnfPassword? <p className={styles.error}>{error.cnfPassword}</p>:<></>}<br />
           {samePwd ? <p style={{marginBottom: "1vh"}} className={styles.error}>Your confirm Password does not matches with Password</p> : <></>}
-          <button onClick={submitHandle} className={styles.registerbtn}>Register</button>
+          <button onClick={submitHandle} className={styles.registerbtn}>Register
+          &nbsp; &nbsp;
+          {userRegister ? <i className='bx bx-loader-alt bx-spin'></i> : null}
+          </button>
         </form>
         <div>Have an account ?</div>
         <button onClick={()=>navigate('/login')} className={styles.login}>Log in</button>

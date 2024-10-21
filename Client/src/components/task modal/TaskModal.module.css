@@ -1,0 +1,184 @@
+.taskmodal{
+  height: 100vh;
+  width: 100vw;
+  font-family: open sans;
+  background-color: #ffffff7a;
+  position: fixed;
+  z-index: 2;
+}
+.addtodo{
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  position: fixed;
+  height: 70vh;
+  width: 40vw;
+  background-color: #ffffff;
+  border-radius: .5rem;
+  padding: 1vh 1vw;
+  box-shadow: 1px 1px 2px grey ;
+}
+.addtodo h2{
+  font-size: 1.1vw;
+  font-weight: 500;
+}
+.addtodo h3{
+  color: #767575;
+  font-weight: 500;
+  font-size: 1.1vw;
+  cursor: pointer;
+  margin-top: 1.5vh;
+}
+.title{
+  height: 4vh;
+  width: 38vw;
+  margin-top: 1vh;
+  margin-bottom: 3vh;
+  box-shadow: 0px 1px 2px 0px #4D40551A;
+  border: 1px solid #E2E2E2;
+  border-radius: .5rem;
+  padding: 3px 10px;
+  color: #9B959F;
+}
+.priority{
+  display: flex;
+  gap: .3vw;
+  margin-left: .5vw;
+}
+.dot{
+  font-size: .8vw;
+  position: relative;
+  top: 1vh;
+  left: 1.2vw;
+ }
+ .priorityOption{
+  color: #767575;
+  border: 1px solid #E2E2E2;
+  border-radius: .3rem;
+  height: 4vh;
+  width: 7vw;
+  padding: 2px 9px;
+  text-align: center;
+  cursor: pointer;
+  font-size: .8vw;
+}
+.moderate{
+  color: #767575;
+  border: 1px solid #E2E2E2;
+  border-radius: .3rem;
+  height: 4vh;
+  width: 10vw;
+  padding: 2px 0px 2px 7px;
+  text-align: center;
+  cursor: pointer;
+  font-size: .8vw;
+}
+.assign{
+  margin-top: 1vh;
+  margin-left: 1vw;
+  margin-bottom: 1vh;
+}
+.assign select{
+  margin-left: 1.5vw;
+  height: 4vh;
+  width: 32vw;
+  border: 1px solid #E2E2E2;
+  border-radius: .3rem;
+  padding: 2px 5px;
+}
+.checklistdiv{
+  max-height: 25vh;
+  width: 40vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  }
+  .checklistdiv::-webkit-scrollbar {
+    width: .5vw;
+  }
+  .checklistdiv::-webkit-scrollbar-track {
+    background: #FFFFFF;
+  }
+  .checklistdiv::-webkit-scrollbar-thumb {
+    background: #9CB7C5; 
+    border-radius: 10px;
+  }
+  .checklistcomp{
+    margin-bottom: -5vh;
+    margin-top: 3vh;
+    margin-left: -1vw;
+  }
+  .checkbox{
+    height: 3vh;
+    width: 2vw;
+    position: relative;
+    left: 2vw;
+    top: 1vh;
+  }
+  .checklistinput{
+    height: 4vh;
+    width: 32vw;
+    box-shadow: 0px 1px 2px 0px #4D40551A;
+    border: 1px solid #E2E2E2;
+    border-radius: .5rem;
+    padding: 3px 2vw;
+    color: #9B959F;
+    margin-bottom: 5vh;
+  }
+  .delete{
+    position: relative;
+    top: 1vh;
+    right: 4%;
+    font-size: 1.4vw;
+    color: #CF3636;
+    cursor: pointer;
+  }
+  .addNew{
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.2vw;
+  }
+  .buttons{
+    position: fixed;
+    bottom: 15vh;
+  }
+  .date{
+    border: 1px solid #E2E2E2;
+    height: 5vh;
+    width: 11vw;
+    color: #707070;
+    font-weight: 500;
+    border-radius: .3rem;
+    font-size: 1.1vw;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    position: fixed;
+    bottom: 15vh;
+    text-align: center;
+  }
+  .cancel{
+    border: 1px solid #CF3636;
+    height: 5vh;
+    width: 10vw;
+    background-color: #FFFFFF;
+    color: #CF3636;
+    font-weight: 600;
+    border-radius: .3rem;
+    font-size: 1.1vw;
+    margin-right: 2vw;
+    margin-left: 18vw;
+    cursor: pointer;
+  }
+  
+.save{
+  border: none;
+  height: 5vh;
+  width: 10vw;
+  background-color: #17A2B8;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: .3rem;
+  font-size: 1.1vw;
+  cursor: pointer;
+}

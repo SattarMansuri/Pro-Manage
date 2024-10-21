@@ -8,11 +8,13 @@ import { useState } from 'react'
 import { updateUser } from '../../apis/auth'
 import toast, { Toaster } from 'react-hot-toast';
 import { useNavigate } from 'react-router';
+import 'boxicons/css/boxicons.min.css'
 
 const Setting = () => {
   const navigate = useNavigate()
   const email = localStorage.getItem('email')
   const name = localStorage.getItem('user')
+  const [passwordUpdate, setPasswordUpdate] = useState(false)
   const [error, setError] = useState({})
   const [formData, setFormData] = useState({
     newName: "" || name,
@@ -32,6 +34,7 @@ const Setting = () => {
       setShowUpPwd(false)
     }
     const submitHandle = async (e) =>{
+      setPasswordUpdate(true)
       e.preventDefault()
       const error = {}
       if(!formData.oldPassword.length){
@@ -48,6 +51,7 @@ const Setting = () => {
       console.log(response.success)
       if(response?.success === false){
         toast.error(response.message)
+        setPasswordUpdate(false)
       }
       if(response?.success === true){
         toast.success(response.message)
@@ -77,7 +81,10 @@ const Setting = () => {
           {showUpPwd ? <BsEye className={styles.upPwdShow} onClick={upPasswordShow}/> : <BsEyeSlash className={styles.upPwdHide} onClick={()=>setShowUpPwd(true)}/>}
           {error.upPassword? <p className={styles.error}>{error.upPassword}</p>:<></>}<br />
           {samePwd ? <p style={{marginBottom: "1vh"}} className={styles.error}>Your old Password and new Password should not be same</p> : <></>}
-          <button onClick={submitHandle}  className={styles.registerbtn}>Update</button>
+          <button onClick={submitHandle}  className={styles.registerbtn}>Update
+          &nbsp; &nbsp;
+          {passwordUpdate ? <i className='bx bx-loader-alt bx-spin'></i> : null}
+          </button>
     </form>
    </div>
     </div>

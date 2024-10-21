@@ -29,7 +29,7 @@ const userRegistration = async (req, res)=>{
     })
     await newCandidate.save()
     const token = jwt.sign(
-      {id: newCandidate._id},
+      {userId: newCandidate._id},
       process.env.SECRET_KEY,
       { expiresIn: "60h" }
     )
@@ -60,7 +60,7 @@ const userLogin = async (req, res)=>{
       res.status(400).json({message: "You have entered a wrong password", success: false})
     }
     const token = jwt.sign(
-      {id: user._id},
+      {userId: user._id},
       process.env.SECRET_KEY,
       { expiresIn: "60h" }
     )
@@ -100,8 +100,8 @@ const UpdatePassword = async (req, res)=>{
 
 const addMail = async (req, res)=>{
   try {
-    const email =  req.body
-    const newMail = new Mail(email)
+    const {email} =  req.body
+    const newMail = new Mail({email, userRef: req.body.userId})
     const response = await newMail.save()
     res.status(200).json({message: "Mail saved successfully", success: true, email: response})
   } catch (error) {
@@ -111,7 +111,8 @@ const addMail = async (req, res)=>{
 
 const getAllMails =  async(req, res)=>{
   try {
-    const allMail = await Mail.find()
+    const userId = req.body.userId
+    const allMail = await Mail.find({userRef: userId})
     res.status(200).json(allMail)
   } catch (error) {
     console.log(error)
